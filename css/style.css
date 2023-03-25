@@ -151,6 +151,10 @@ h6,
     .navbar-light .navbar-brand img {
         max-height: 45px;
     }
+
+    .nav-login {
+        color: var(--dark) !important;
+    }
 }
 
 @media (min-width: 992px) {
@@ -399,3 +403,22 @@ h6,
     padding-right: 0;
     border-right: none;
 }
+
+.nav-login {
+    margin-left: 25px;
+    padding: 35px 0;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: bolder;
+    outline: none;
+    transition: .5s;
+}
+.sticky-top .nav-login {
+    color: var(--dark) !important;
+}
+.nav-login:hover {
+    color: var(--secondary) !important;
+}
+
