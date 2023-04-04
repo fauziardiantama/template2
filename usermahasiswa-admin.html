@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>List User Admin | SIMKMM</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bootstrap 4 -->
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+
+  <style>
+    .user-body {
+      border-bottom: 0 !important;
+    }
+  </style>
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+  </div>
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light" style="background-color: #FED700">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link  text-dark" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="dashboard-admin.html" class="nav-link  text-dark">Dashboard</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="index.html" class="nav-link  text-dark">Halaman utama</a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+
+      <li class="nav-item">
+        <a class="nav-link  text-dark" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+      <li class="nav-item dropdown user user-menu">
+        <a href="#" class="nav-link dropdown-toggle  text-dark" data-toggle="dropdown">
+          
+          <span class="hidden-xs">Admin KMM</span>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <!-- User image -->
+          <li class="user-header bg-primary">
+            <p>
+              Alexander Pierce - Web Developer
+              <small>Member since Nov. 2012</small>
+            </p>
+          </li>
+          <!-- Menu Body -->
+          <li class="user-body">
+            <div class="row">
+              <div class="col-4 text-center">
+                <a href="#">Profile</a>
+              </div>
+              <div class="col-4 text-center">
+                <a href="#">Notes</a>
+              </div>
+              <div class="col-4 text-center">
+                <a href="#">Log out</a>
+              </div>
+            </div>
+            <!-- /.row -->
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link  text-dark" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#" role="button">
+          <i class="fas fa-th-large"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-light-primary elevation-4" style="background: rgb(2,0,36);
+  background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,0,107,1) 20%, rgba(0,0,0,1) 100%);">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link text-white" style="border-color: black;">
+      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">SIMKMM D3TI UNS</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item">
+            <a href="dashboard-admin.html" class="nav-link text-white font-weight-bolder" style="outline: 1px white;">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Dashboard
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="topikkmm-admin.html" class="nav-link text-white">
+              <i class="nav-icon fas fa-book"></i>
+              <p>
+                Topik KMM
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="informasikmm-admin.html" class="nav-link text-white">
+              <i class="nav-icon fas fa-file"></i>
+              <p>
+                Dokumen Informasi KMM
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="listuser-admin.html" class="nav-link text-white">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                List Pengguna
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="beritakmm-admin.html" class="nav-link text-white">
+              <i class="nav-icon fas fa-newspaper"></i>
+              <p>
+                Berita KMM
+              </p>
+            </a>
+          </li>
+          <li class="nav-header text-white">Lainnya</li>
+          <li class="nav-item">
+            <a href="profil-admin.html" class="nav-link text-white">
+              <i class="nav-icon fas fa-cogs"></i>
+              <p>
+                Profil
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="logout-admin.html" class="nav-link text-white">
+              <i class="nav-icon fas fa-sign-out-alt"></i>
+              <p>
+                Log out
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Dashboard</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Dashboard</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3">
+
+            <!-- Profile Image -->
+            <div class="card card-primary card-outline">
+              <div class="card-body box-profile">
+                <div class="text-center">
+                  <img class="profile-user-img img-fluid img-circle"
+                       src="dist/img/user4-128x128.jpg"
+                       alt="User profile picture">
+                </div>
+
+                <h3 class="profile-username text-center">Nama mahasiswa</h3>
+
+                <p class="text-muted text-center">V1234567</p>
+
+                <ul class="list-group list-group-unbordered mb-3">
+                  <li class="list-group-item">
+                    <a href="#">adadafe@dosen.uns.ac.id</a>
+                  </li>
+                  <li class="list-group-item">
+                    <a href="#">0812345678</a>
+                  </li>
+                </ul>
+
+                <a href="#" class="btn btn-primary btn-block"><b>Tombol</b></a>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+          <div class="col-md-9">
+            <div class="card">
+              <div class="card-header p-2">
+                <ul class="nav nav-pills">
+                  <li class="nav-item"><a class="nav-link active" href="#timeline" data-toggle="tab">Dokumen pendaftaran</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#kondisi" data-toggle="tab">Kondisi Mahasiswa</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Edit</a></li>
+                </ul>
+              </div><!-- /.card-header -->
+              <div class="card-body">
+                <div class="tab-content">
+                  <!-- /.tab-pane -->
+                  <div class="active tab-pane" id="timeline">
+                    <!-- The timeline -->
+                    <ul class="mailbox-attachments d-flex justify-content-between clearfix">
+                      <li>
+                        <span class="mailbox-attachment-icon"><i class="far fa-file-pdf"></i></span>
+      
+                        <div class="mailbox-attachment-info">
+                          <a href="#" class="mailbox-attachment-name"><i class="fas fa-paperclip"></i> V12345-KRS.pdf</a>
+                              <span class="mailbox-attachment-size clearfix mt-1">
+                                <span>1,245 KB</span>
+                                <a href="#" class="btn btn-default btn-sm float-right"><i class="fas fa-cloud-download-alt"></i></a>
+                              </span>
+                        </div>
+                      </li>
+                      <li>
+                        <span class="mailbox-attachment-icon"><i class="far fa-file-pdf"></i></span>
+      
+                        <div class="mailbox-attachment-info">
+                          <a href="#" class="mailbox-attachment-name"><i class="fas fa-paperclip"></i> V12345-Transkrip.pdf</a>
+                              <span class="mailbox-attachment-size clearfix mt-1">
+                                <span>1,245 KB</span>
+                                <a href="#" class="btn btn-default btn-sm float-right"><i class="fas fa-cloud-download-alt"></i></a>
+                              </span>
+                        </div>
+                      </li>
+                      <li>
+                        <span class="mailbox-attachment-icon"><i class="far fa-file-pdf"></i></span>
+      
+                        <div class="mailbox-attachment-info">
+                          <a href="#" class="mailbox-attachment-name"><i class="fas fa-paperclip"></i>V12345-Bukti-Seminar.pdf</a>
+                              <span class="mailbox-attachment-size clearfix mt-1">
+                                <span>1,245 KB</span>
+                                <a href="#" class="btn btn-default btn-sm float-right"><i class="fas fa-cloud-download-alt"></i></a>
+                              </span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- /.tab-pane -->
+                  <div class="tab-pane" id="kondisi">
+                    <!-- The timeline -->
+                    <div class="table-responsive">
+                      <table class="table">
+                        <tr>
+                          <th style="width:50%">Subtotal:</th>
+                          <td>$250.30</td>
+                        </tr>
+                        <tr>
+                          <th>Tax (9.3%)</th>
+                          <td>$10.34</td>
+                        </tr>
+                        <tr>
+                          <th>Shipping:</th>
+                          <td>$5.80</td>
+                        </tr>
+                        <tr>
+                          <th>Total:</th>
+                          <td>$265.24</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="tab-pane" id="settings">
+                    <form class="form-horizontal">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">NIM</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="exampleInputEmail1">Nama</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">E-mail</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">No. Telepon</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                      </div>
+                      <div class="form-group row pl-1 pr-1 justify-content-between">
+                          <button type="submit" class="btn btn-success">Simpan</button>
+                          <button type="submit" class="btn btn-danger">Delete</button>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- /.tab-pane -->
+                </div>
+                <!-- /.tab-content -->
+              </div><!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+      </div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer text-dark" style="background-color: #FED700;">
+    <strong>SIMKMM Copyright &copy; 2023 Design by <a class="text-dark" href="https://adminlte.io">AdminLTE.io</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block text-dark">
+      <b>Version</b> 3.2.0
+    </div>
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.js"></script>
+<script src="dist/js/demo.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="dist/js/pages/dashboard.js"></script>
+
+</body>
+</html>
