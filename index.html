@@ -367,6 +367,17 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+	<script>
+		$(document).ready(function() {
+		  fetch('https://doc-gen.faridfrederick.repl.co/tesss')
+		    .then(response => response.json())
+		    .then(data => {
+		      console.log(data);
+		      // Your code to handle the retrieved data goes here
+		    })
+		    .catch(error => console.error(error));
+		});
+	</script>
 </body>
 
 </html>
